@@ -2,6 +2,8 @@
 
 Proyek ini adalah jam digital modern dengan nuansa biru, menampilkan waktu dan tanggal secara real-time. Dibuat menggunakan HTML, CSS, dan JavaScript, serta responsif di berbagai perangkat.
 
+<!--  -->
+
 ## Fitur
 
 - **Tampilan Cyber Modern**: Font Orbitron, efek neon biru, dan animasi background.
@@ -42,4 +44,4 @@ Bebas digunakan untuk pembelajaran dan pengembangan pribadi.
 
 ---
 
-Dibuat oleh Melki, 2025
+Dibuat oleh 💻Melki, 2025
