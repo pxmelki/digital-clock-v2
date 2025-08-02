@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(270deg, #232526, #2196f3, #232526);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Orbitron", "Courier New", monospace;
+  padding: 20px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#clock {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  background: rgba(17, 17, 17, 0.85);
+  padding: 30px 50px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(33, 150, 243, 0.25),
+    0 1.5px 8px rgba(33, 150, 243, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.15em;
+  border: 2px solid #2196f3;
+  text-shadow: 0 0 10px #2196f3, 0 0 20px rgba(33, 150, 243, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: fit-content;
+}
+
+#clock:hover {
+  box-shadow: 0 12px 40px rgba(33, 150, 243, 0.6),
+    0 2px 12px rgba(33, 150, 243, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  background: rgba(17, 17, 17, 0.95);
+  transform: translateY(-2px);
+}
+
+.date-display {
+  color: #2196f3;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.8;
+  letter-spacing: 0.05em;
+}
+
+/* --- Media Queries untuk Responsivitas --- */
+
+/* Desktop Large */
+@media (min-width: 1200px) {
+  #clock {
+    font-size: 5rem;
+    padding: 40px 60px;
+    border-radius: 28px;
+  }
+  .date-display {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablet hingga Desktop Kecil */
+@media (max-width: 1199px) {
+  #clock {
+    font-size: 3.5rem;
+    padding: 25px 40px;
+  }
+  .date-display {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile hingga Tablet */
+@media (max-width: 768px) {
+  #clock {
+    font-size: 2.5rem;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 400px;
+  }
+  .date-display {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Kecil */
+@media (max-width: 480px) {
+  #clock {
+    font-size: 2rem;
+    padding: 15px 20px;
+    letter-spacing: 0.08em;
+  }
+  .date-display {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Animasi --- */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 8px 32px rgba(33, 150, 243, 0.25),
+      0 1.5px 8px rgba(33, 150, 243, 0.2);
+  }
+  50% {
+    box-shadow: 0 12px 40px rgba(33, 150, 243, 0.4),
+      0 2px 12px rgba(33, 150, 243, 0.3);
+  }
+}
+
+.loading #clock {
+  animation: glow 2s ease-in-out infinite;
+}
